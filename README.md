@@ -86,7 +86,7 @@ entityManager.removeEntity(entity);
 Selected entity will be removed during the next update cycle, before updating existing systems.
 
 ## Removing components
-1. Remove a specific component of entity:
+1. Remove a specific component from entity:
 ```
 entityManager.removeComponent<TransformComponent>(entity);
 ```
