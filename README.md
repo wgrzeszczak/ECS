@@ -1,5 +1,5 @@
 # ECS
-Simple single header ECS implementation with continuous memory allocation of components.
+Simple ECS implementation with continuous memory allocation of components.
 
 ### Entities
 Entities are simple identifiers, which allow systems to identify connected components that the entity comprises of.
