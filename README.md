@@ -34,6 +34,7 @@ entityManager.createSystem<MovementSystem>();
 ```
 
 You can pass arguments to the createSystem method. They will be forwarded to the created system's constructor.
+
 2. Call the following code to update existing systems:
 ```
 float delta = ...; // elapsed time since last update
