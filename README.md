@@ -24,16 +24,30 @@ Entity entity = entityManager.createEntity();
 ### Creating systems
 1. Create a new system:
 ```
+class MovementSystem : public ECS::System {
+  virtual void update(const float delta) override {
+  
+  }
+};
+
 entityManager.createSystem<MovementSystem>();
 ```
 
 You can pass arguments to the createSystem method. They will be forwarded to the created system's constructor.
+2. Call the following code to update existing systems:
+```
+float delta = ...; // elapsed time since last update
+entityManager.update(delta);
+```
 
 ### Creating entities with components
 1. Create a new component:
 ```
-entityManager.createComponent<TransformComponent>(entity, position);
-entityManager.createComponent<MovementComponent>(entity, velocity);
+struct TransformComponent : public ECS::Component {
+  float x,y,z;
+};
+
+entityManager.createComponent<TransformComponent>(entity, 0.0f, 0.0f, 0.0f);
 ```
 
 You can pass arguments to the createComponent method. They will be forwarded to the created component's constructor.
