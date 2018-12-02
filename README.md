@@ -51,30 +51,30 @@ MovementSystem* movementSystem = entityManager.getSystem<MovementSystem>();
 ```
 
 ### Retrieving components
-1. Retrieve components belonging to an entity e:
+1. Retrieve a component:
 ```
-TransformComponent* transformComponent = entityManager.getComponent<TransformComponent>(e);
+TransformComponent* transformComponent = entityManager.getComponent<TransformComponent>(entity);
 ```
-2. Get all components of specified type:
+2. Get all components of type:
 ```
 std::vector<TransformComponent> transformComponents = entityManager.getComponents<TransformComponent>();
 ```
-3. Get the first component of specified type:
+3. Get the first component of type:
 ```
 TransformComponent* transformComponent = entityManager.getComponent<TransformComponent>();
 ```
 
 ## Removing entities
-1. Remove a specific entity e:
+1. Remove a specific entity:
 ```
-entityManager.removeEntity(e);
+entityManager.removeEntity(entity);
 ```
 Selected entity will be removed during the next update cycle, before updating existing systems.
 
 ## Removing components
-1. Remove a specific component of entity e:
+1. Remove a specific component of entity:
 ```
-entityManager.removeComponent<TransformComponent>(e);
+entityManager.removeComponent<TransformComponent>(entity);
 ```
 
 ## License
